@@ -1,5 +1,11 @@
+import Nav from "./Nav"
+
 const Header = () => {
-  return <header>Hello from header</header>
+  return (
+    <header>
+      <Nav />
+    </header>
+  )
 }
 
 export default Header
