@@ -1,9 +1,14 @@
-import Nav from "./Nav"
+import Navbar from "./Navbar"
+import logo from "../assets/images/logo.svg"
 
 const Header = () => {
   return (
     <header>
-      <Nav />
+      <img
+        src={logo}
+        alt='logo'
+      />
+      <Navbar />
     </header>
   )
 }

@@ -1,0 +1,74 @@
+// RESET
+* {
+  box-sizing: border-box;
+}
+
+body,
+p,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+// BASE STYLES
+body {
+  min-height: 100vh;
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 15px;
+  background-color: $almost-white;
+  overflow-x: hidden;
+}
+
+main {
+
+  @media (min-width: 900px) {
+    display: grid;
+    grid-template-columns: 32.2% 32.2% 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: $almost-black;
+  }
+
+  h1 {
+    font-size: 1.6em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  p,
+  a,
+  li,
+  span {
+    color: $almost-black;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+
+  img {
+    width: 100%;
+  }
+
+}
