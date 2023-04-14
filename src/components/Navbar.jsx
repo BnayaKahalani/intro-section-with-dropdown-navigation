@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { Link, NavLink } from "react-router-dom"
 import iconMenu from "../assets/images/icon-menu.svg"
 import iconCloseMenu from "../assets/images/icon-close-menu.svg"
+import Features from "./Features"
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -68,6 +69,7 @@ const Nav = () => {
             </NavLink>
           </li>
         </ul>
+        <Features />
       </div>
     </nav>
   )
