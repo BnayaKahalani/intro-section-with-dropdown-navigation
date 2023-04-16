@@ -132,6 +132,10 @@ const Nav = () => {
             </NavLink>
           </li>
         </ul>
+        <div className='nav-btns'>
+          <button className='login-btn'>Login</button>
+          <button className='register-btn'>Register</button>
+        </div>
       </div>
     </nav>
   )

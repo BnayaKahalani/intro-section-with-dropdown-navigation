@@ -35,4 +35,23 @@ nav {
       display: flex;
     }
   }
+
+  .nav-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .login-btn {
+      background-color: transparent;
+      border: none;
+    }
+
+
+    .register-btn {
+      padding: 8px 15px;
+      margin: 0 8px;
+      border-radius: 8px;
+      background-color: transparent;
+    }
+  }
 }
