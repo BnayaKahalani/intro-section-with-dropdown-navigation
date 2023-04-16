@@ -2,21 +2,29 @@ import React, { useState } from "react"
 import { Link, NavLink } from "react-router-dom"
 import iconMenu from "../assets/images/icon-menu.svg"
 import iconCloseMenu from "../assets/images/icon-close-menu.svg"
-import Features from "./Features"
+import iconArrowUp from "../assets/images/icon-arrow-up.svg"
+import iconArrowDown from "../assets/images/icon-arrow-down.svg"
+import Dropdown from "./Dropdown"
+import todo from "../assets/images/icon-todo.svg"
+import calendar from "../assets/images/icon-calendar.svg"
+import reminders from "../assets/images/icon-reminders.svg"
+import planning from "../assets/images/icon-planning.svg"
 
 const Nav = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isFeaturesOpen, setIsFeaturesOpen] = useState(false)
+  const [isCompanyOpen, setIsCompanyOpen] = useState(false)
 
-  const toggleMenu = () => {
+  const toggle = (isOpen, setIsOpen) => {
     setIsOpen(!isOpen)
   }
 
   return (
     <nav>
-      {isOpen ? (
+      {isMenuOpen ? (
         <button
           className='menu-toggle'
-          onClick={toggleMenu}
+          onClick={() => toggle(isMenuOpen, setIsMenuOpen)}
         >
           <img
             src={iconCloseMenu}
@@ -26,7 +34,7 @@ const Nav = () => {
       ) : (
         <button
           className='menu-toggle'
-          onClick={toggleMenu}
+          onClick={() => toggle(isMenuOpen, setIsMenuOpen)}
         >
           <img
             src={iconMenu}
@@ -34,23 +42,78 @@ const Nav = () => {
           />
         </button>
       )}
-      <div className={`menu-container ${isOpen ? "open" : ""}`}>
+      <div className={`menu-container ${isMenuOpen ? "open" : ""}`}>
         <ul>
           <li className='nav-features'>
             <NavLink
               className='nav-link'
               to='/features'
+              onClick={() => toggle(isFeaturesOpen, setIsFeaturesOpen)}
             >
               Features
+              <img
+                src={isFeaturesOpen ? iconArrowUp : iconArrowDown}
+                alt='arrow-icon'
+              />
             </NavLink>
+            {isFeaturesOpen && (
+              <Dropdown>
+                <li>
+                  <img
+                    src={todo}
+                    alt='todo-icon'
+                  />
+                  <span>Todo List</span>
+                </li>
+                <li>
+                  <img
+                    src={calendar}
+                    alt='calendar-icon'
+                  />
+                  <span>Calendar</span>
+                </li>
+                <li>
+                  <img
+                    src={reminders}
+                    alt='reminders-icon'
+                  />
+                  <span>Reminders</span>
+                </li>
+                <li>
+                  <img
+                    src={planning}
+                    alt='planning-icon'
+                  />
+                  <span>Planning</span>
+                </li>
+              </Dropdown>
+            )}
           </li>
           <li className='nav-company'>
             <NavLink
               className='nav-link'
               to='/company'
+              onClick={() => toggle(isCompanyOpen, setIsCompanyOpen)}
             >
               Company
+              <img
+                src={isCompanyOpen ? iconArrowUp : iconArrowDown}
+                alt='arrow-icon'
+              />
             </NavLink>
+            {isCompanyOpen && (
+              <Dropdown>
+                <li>
+                  <span>Todo List</span>
+                </li>
+                <li>
+                  <span>Calendar</span>
+                </li>
+                <li>
+                  <span>Reminders</span>
+                </li>
+              </Dropdown>
+            )}
           </li>
           <li className='nav-careers'>
             <NavLink
@@ -69,7 +132,6 @@ const Nav = () => {
             </NavLink>
           </li>
         </ul>
-        <Features />
       </div>
     </nav>
   )
