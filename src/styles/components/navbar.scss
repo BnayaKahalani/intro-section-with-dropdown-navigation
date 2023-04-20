@@ -34,6 +34,14 @@ nav {
     @media (min-width: 900px) {
       display: flex;
     }
+
+    li {
+      margin-bottom: 1em;
+
+      img {
+        margin-left: 0.5em;
+      }
+    }
   }
 
   .nav-btns {
@@ -45,7 +53,6 @@ nav {
       background-color: transparent;
       border: none;
     }
-
 
     .register-btn {
       padding: 8px 15px;

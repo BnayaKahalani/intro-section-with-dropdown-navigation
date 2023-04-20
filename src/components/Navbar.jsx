@@ -10,13 +10,14 @@ import calendar from "../assets/images/icon-calendar.svg"
 import reminders from "../assets/images/icon-reminders.svg"
 import planning from "../assets/images/icon-planning.svg"
 
-const Nav = () => {
+const Nav = ({ toggleMenu }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isFeaturesOpen, setIsFeaturesOpen] = useState(false)
   const [isCompanyOpen, setIsCompanyOpen] = useState(false)
 
   const toggle = (isOpen, setIsOpen) => {
     setIsOpen(!isOpen)
+    toggleMenu()
   }
 
   return (
