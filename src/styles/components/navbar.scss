@@ -1,6 +1,7 @@
 nav {
   display: flex;
   flex-direction: row-reverse;
+  z-index: 10;
 
   .menu-container {
     position: fixed;
