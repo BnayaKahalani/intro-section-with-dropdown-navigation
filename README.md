@@ -4,7 +4,7 @@ The challenge was to build out a Intro section with dropdown navigation and get 
 
 [Click here to see the result.](https://bnayakahalani.github.io/news-homepage/)
 
-Tools I used: React, SASS and Vite.
+Tools I used: React, Redux Toolkit, SASS and Vite.
 
 Here are some photos of the final product:
 

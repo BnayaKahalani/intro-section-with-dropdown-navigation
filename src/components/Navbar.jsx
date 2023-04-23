@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-import { Link, NavLink } from "react-router-dom"
+import { useDispatch, useSelector } from "react-redux"
+import { NavLink } from "react-router-dom"
 import iconMenu from "../assets/images/icon-menu.svg"
 import iconCloseMenu from "../assets/images/icon-close-menu.svg"
 import iconArrowUp from "../assets/images/icon-arrow-up.svg"
@@ -9,23 +10,26 @@ import todo from "../assets/images/icon-todo.svg"
 import calendar from "../assets/images/icon-calendar.svg"
 import reminders from "../assets/images/icon-reminders.svg"
 import planning from "../assets/images/icon-planning.svg"
+import toggleMenu from "../redux/toggleMenu"
 
-const Nav = ({ toggleMenu }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+const Nav = () => {
+  const { toggleMenu } = useSelector((state) => state.toggleMenu.value)
+
   const [isFeaturesOpen, setIsFeaturesOpen] = useState(false)
   const [isCompanyOpen, setIsCompanyOpen] = useState(false)
 
+  const dispatch = useDispatch()
+
   const toggle = (isOpen, setIsOpen) => {
     setIsOpen(!isOpen)
-    toggleMenu()
   }
 
   return (
     <nav>
-      {isMenuOpen ? (
+      {toggleMenu ? (
         <button
           className='menu-toggle'
-          onClick={() => toggle(isMenuOpen, setIsMenuOpen)}
+          onClick={() => dispatch(toggleMenu)}
         >
           <img
             src={iconCloseMenu}
@@ -35,7 +39,7 @@ const Nav = ({ toggleMenu }) => {
       ) : (
         <button
           className='menu-toggle'
-          onClick={() => toggle(isMenuOpen, setIsMenuOpen)}
+          onClick={() => dispatch(toggleMenu)}
         >
           <img
             src={iconMenu}
@@ -43,7 +47,7 @@ const Nav = ({ toggleMenu }) => {
           />
         </button>
       )}
-      <div className={`menu-container ${isMenuOpen ? "open" : ""}`}>
+      <div className={`menu-container ${toggleMenu ? "open" : ""}`}>
         <ul>
           <li className='nav-features'>
             <NavLink

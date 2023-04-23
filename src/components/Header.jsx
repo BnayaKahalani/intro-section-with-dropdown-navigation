@@ -1,14 +1,14 @@
 import Navbar from "./Navbar"
 import logo from "../assets/images/logo.svg"
 
-const Header = ({ toggleMenu }) => {
+const Header = () => {
   return (
     <header>
       <img
         src={logo}
         alt='logo'
       />
-      <Navbar toggleMenu={toggleMenu} />
+      <Navbar />
     </header>
   )
 }
