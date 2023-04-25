@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 import Header from "./components/Header"
+import { HeroImage } from "./components/HeroImage"
+import { HeroText } from "./components/HeroText"
 import Nav from "./components/Navbar"
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
         />
       )}
       <h1>Hello from app</h1>
+      <HeroText />
     </div>
   )
 }
