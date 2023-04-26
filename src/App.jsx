@@ -1,27 +1,26 @@
-import React, { useState } from "react"
+import React from "react"
+import { useSelector, useDispatch } from "react-redux"
 import Header from "./components/Header"
 import { HeroImage } from "./components/HeroImage"
 import { HeroText } from "./components/HeroText"
-import Nav from "./components/Navbar"
+import { Partners } from "./components/Partners"
+import { toggleMenu } from "./redux/menu"
 
 function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+  const toggleMenuValue = useSelector((state) => state.menuStore.value)
+  const dispatch = useDispatch()
 
   return (
     <div className='App'>
-      <Header toggleMenu={toggleMenu} />
-      {isMenuOpen && (
+      <Header />
+      {toggleMenuValue && (
         <div
           className='overlay'
-          onClick={toggleMenu}
+          onClick={() => dispatch(toggleMenu())}
         />
       )}
-      <h1>Hello from app</h1>
       <HeroText />
+      <Partners />
     </div>
   )
 }

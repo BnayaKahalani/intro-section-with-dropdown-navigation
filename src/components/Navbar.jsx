@@ -10,10 +10,10 @@ import todo from "../assets/images/icon-todo.svg"
 import calendar from "../assets/images/icon-calendar.svg"
 import reminders from "../assets/images/icon-reminders.svg"
 import planning from "../assets/images/icon-planning.svg"
-import toggleMenu from "../redux/toggleMenu"
+import { toggleMenu } from "../redux/menu"
 
 const Nav = () => {
-  const { toggleMenu } = useSelector((state) => state.toggleMenu.value)
+  const toggleMenuValue = useSelector((state) => state.menuStore.value)
 
   const [isFeaturesOpen, setIsFeaturesOpen] = useState(false)
   const [isCompanyOpen, setIsCompanyOpen] = useState(false)
@@ -26,10 +26,10 @@ const Nav = () => {
 
   return (
     <nav>
-      {toggleMenu ? (
+      {toggleMenuValue ? (
         <button
           className='menu-toggle'
-          onClick={() => dispatch(toggleMenu)}
+          onClick={() => dispatch(toggleMenu())}
         >
           <img
             src={iconCloseMenu}
@@ -39,7 +39,7 @@ const Nav = () => {
       ) : (
         <button
           className='menu-toggle'
-          onClick={() => dispatch(toggleMenu)}
+          onClick={() => dispatch(toggleMenu())}
         >
           <img
             src={iconMenu}
@@ -47,7 +47,7 @@ const Nav = () => {
           />
         </button>
       )}
-      <div className={`menu-container ${toggleMenu ? "open" : ""}`}>
+      <div className={`menu-container ${toggleMenuValue ? "open" : ""}`}>
         <ul>
           <li className='nav-features'>
             <NavLink
