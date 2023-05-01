@@ -1,41 +1,82 @@
 nav {
   display: flex;
+  flex-direction: row-reverse;
+  z-index: 10;
 
-  @media (max-width: 770px) {
-    flex-direction: row-reverse;
-    z-index: 10;
+  @media (min-width: 770px) {
+    width: 100%;
+  }
 
-    .menu-container {
-      position: fixed;
-      padding: 15px;
-      top: 0;
-      right: -100%;
-      width: 50%;
-      height: 100%;
-      overflow-y: auto;
-      transition: right 0.3s ease-in-out;
-      padding-top: 20%;
+
+  .menu-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    top: 0;
+    right: -100%;
+    width: 50%;
+    height: 100%;
+    overflow-y: auto;
+    transition: right 0.3s ease-in-out;
+    padding-top: 20%;
+
+    :hover {
+      cursor: pointer;
     }
 
-    .menu-container.open {
-      right: 0;
-    }
-
-    .menu-toggle {
-
+    ul {
       display: flex;
       flex-direction: column;
-      z-index: 10;
-      justify-content: center;
-      align-items: center;
-      width: 50px;
-      height: 50px;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-
-
+      gap: 15px;
     }
+
+
+    @media (min-width: 770px) {
+      position: static;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      padding-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+      }
+
+      li {
+
+        ul {
+          position: absolute;
+          flex-direction: column;
+          margin-top: 20px;
+          padding: 15px;
+        }
+      }
+    }
+  }
+
+  .menu-container.open {
+    right: 0;
+  }
+
+  .menu-toggle {
+
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
   }
 
   button.menu-toggle {
@@ -43,26 +84,18 @@ nav {
       display: none;
     }
 
-    ul {
-      @media (min-width: 770px) {
-        flex-direction: row
-      }
-
-
-      li {
-        margin-bottom: 1em;
-
-        img {
-          margin-left: 0.5em;
-        }
-      }
-    }
   }
 
   .nav-btns {
     display: flex;
     flex-direction: column;
     gap: 15px;
+
+
+    @media (min-width: 770px) {
+      flex-direction: row;
+      ;
+    }
 
     .login-btn {
       background-color: transparent;

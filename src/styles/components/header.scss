@@ -3,4 +3,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+
+  @media (min-width: 770px) {
+    justify-content: start;
+  }
 }
