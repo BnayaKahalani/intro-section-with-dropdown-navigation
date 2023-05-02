@@ -23,8 +23,6 @@ li {
 }
 
 // BASE STYLES
-
-
 body {
   min-height: 100vh;
   font-weight: 400;
@@ -32,6 +30,7 @@ body {
   font-size: 18px;
   max-width: 1600px;
   margin: auto;
+  padding: 0 10px
 }
 
 main {
@@ -77,12 +76,14 @@ main {
   img {
     width: 100%;
   }
+
 }
 
 a {
   color: $almost-black;
   text-decoration: none;
 }
+
 
 .overlay {
   position: fixed;
@@ -92,4 +93,10 @@ a {
   height: 100%;
   z-index: 0;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+button {
+  &:hover {
+    cursor: pointer;
+  }
 }
