@@ -46,6 +46,12 @@ nav {
 
       li {
 
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
         ul {
           position: absolute;
           flex-direction: column;

@@ -19,8 +19,8 @@ function App() {
           onClick={() => dispatch(toggleMenu())}
         />
       )}
+      <HeroImage />
       <HeroText />
-      <Partners />
     </div>
   )
 }

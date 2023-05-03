@@ -1,4 +1,5 @@
 import React from "react"
+import { Partners } from "./Partners"
 
 export const HeroText = () => {
   return (
@@ -9,6 +10,7 @@ export const HeroText = () => {
         soar.
       </p>
       <button>Learn more</button>
+      <Partners />
     </div>
   )
 }

@@ -1,4 +1,9 @@
 .partners {
   display: flex;
+  width: 100%;
   gap: 25px;
+
+  img {
+    width: 100%;
+  }
 }
