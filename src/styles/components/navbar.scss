@@ -25,6 +25,16 @@ nav {
       display: flex;
       flex-direction: column;
       gap: 15px;
+
+      li {
+
+        a {
+
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+      }
     }
 
 
@@ -45,12 +55,6 @@ nav {
       }
 
       li {
-
-        a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
 
         ul {
           position: absolute;
@@ -100,7 +104,6 @@ nav {
 
     @media (min-width: 770px) {
       flex-direction: row;
-      ;
     }
 
     .login-btn {

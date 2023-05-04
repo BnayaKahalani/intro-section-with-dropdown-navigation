@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux"
 import Header from "./components/Header"
 import { HeroImage } from "./components/HeroImage"
 import { HeroText } from "./components/HeroText"
-import { Partners } from "./components/Partners"
 import { toggleMenu } from "./redux/menu"
 
 function App() {
@@ -19,8 +18,10 @@ function App() {
           onClick={() => dispatch(toggleMenu())}
         />
       )}
-      <HeroImage />
-      <HeroText />
+      <main>
+        <HeroImage />
+        <HeroText />
+      </main>
     </div>
   )
 }
