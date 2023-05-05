@@ -3,6 +3,7 @@ nav {
   flex-direction: row-reverse;
   z-index: 10;
 
+
   @media (min-width: 770px) {
     width: 100%;
   }
@@ -33,6 +34,7 @@ nav {
           display: flex;
           align-items: center;
           gap: 5px;
+          color: $medium-gray;
         }
       }
     }
@@ -100,9 +102,11 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-top: 30px;
 
 
     @media (min-width: 770px) {
+      margin-top: 0;
       flex-direction: row;
     }
 
@@ -112,8 +116,8 @@ nav {
     }
 
     .register-btn {
-      padding: 8px 15px;
-      margin: 0 8px;
+      padding: 8px 25px;
+      margin: 0 auto;
       border-radius: 8px;
       background-color: transparent;
     }
