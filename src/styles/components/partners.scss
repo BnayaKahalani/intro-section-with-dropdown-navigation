@@ -3,6 +3,10 @@
   width: 100%;
   gap: 25px;
 
+  >* {
+    margin: 0;
+  }
+
   img {
     width: 100%;
   }

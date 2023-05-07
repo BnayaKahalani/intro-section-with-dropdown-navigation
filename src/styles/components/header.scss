@@ -4,6 +4,10 @@ header {
   align-items: center;
   padding: 10px 15px;
 
+  .logo {
+    margin-right: 0.5em;
+  }
+
   @media (min-width: 770px) {
     justify-content: start;
   }
