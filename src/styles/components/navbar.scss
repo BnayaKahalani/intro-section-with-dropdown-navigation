@@ -3,11 +3,9 @@ nav {
   flex-direction: row-reverse;
   z-index: 10;
 
-
   @media (min-width: 770px) {
     width: 100%;
   }
-
 
   .menu-container {
     position: fixed;
@@ -35,6 +33,11 @@ nav {
           align-items: center;
           gap: 5px;
           color: $medium-gray;
+
+          &:hover {
+            color: $almost-black
+          }
+
         }
       }
     }
@@ -54,15 +57,25 @@ nav {
         display: flex;
         flex-direction: row;
         gap: 15px;
+
       }
 
       li {
-
         ul {
           position: absolute;
           flex-direction: column;
           margin-top: 20px;
           padding: 15px;
+
+          span {
+            color: $medium-gray;
+            transition: 0.2s;
+
+            &:hover {
+              color: $almost-black;
+              cursor: pointer;
+            }
+          }
         }
 
         img {
@@ -103,7 +116,7 @@ nav {
     flex-direction: column;
     gap: 15px;
     margin-top: 30px;
-
+    color: $medium-gray;
 
     @media (min-width: 770px) {
       margin-top: 0;
@@ -118,6 +131,7 @@ nav {
     .register-btn {
       padding: 8px 25px;
       margin: 0 auto;
+      border-color: $medium-gray;
       border-radius: 8px;
       background-color: transparent;
     }

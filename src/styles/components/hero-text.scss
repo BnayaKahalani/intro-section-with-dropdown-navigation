@@ -26,6 +26,12 @@
     color: $almost-white;
     border-radius: 15px;
     font-size: large;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: $almost-white;
+      color: $almost-black;
+    }
   }
 
   @media (min-width: 770px) {
