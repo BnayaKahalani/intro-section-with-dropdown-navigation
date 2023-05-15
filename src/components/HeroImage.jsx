@@ -6,7 +6,7 @@ export const HeroImage = () => {
   return (
     <picture className='hero-image'>
       <source
-        media='(min-width: 1440px)'
+        media='(min-width: 1200px)'
         srcSet={imageHeroDesktop}
       />
       <img

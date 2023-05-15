@@ -31,7 +31,7 @@ body {
   max-width: 1600px;
   margin: auto;
 
-  @media (min-width: 770px) {
+  @media (min-width: 1200px) {
     padding: 0 10px
   }
 }
@@ -40,12 +40,7 @@ main {
   display: flex;
   flex-direction: column;
 
-  >* {
-    flex-grow: 1;
-  }
-
-
-  @media (min-width: 770px) {
+  @media (min-width: 1200px) {
     gap: 25px;
     flex-direction: row-reverse;
     margin: 2em 6em;
@@ -107,5 +102,9 @@ a {
 button {
   &:hover {
     cursor: pointer;
+  }
+
+  picture {
+    display: block;
   }
 }

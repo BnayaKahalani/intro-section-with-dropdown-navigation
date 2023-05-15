@@ -1,6 +1,9 @@
 .hero-image {
   padding: 0;
   flex-grow: 1;
+  max-width: 500px;
+  max-height: auto;
+  margin: auto;
 
   img {
     width: 100%;

@@ -7,7 +7,7 @@
   margin: 0 15px;
 
   & *:not(:last-child) {
-    margin-bottom: 25px;
+    margin-bottom: 40px;
   }
 
   h1 {
@@ -17,6 +17,7 @@
   p {
     color: $medium-gray;
     font-size: 1em;
+    max-width: 550px;
   }
 
   button {
@@ -34,13 +35,30 @@
     }
   }
 
-  @media (min-width: 770px) {
+  @media (min-width: 1200px) {
     align-items: start;
     text-align: start;
-    font-size: 28px;
+    font-size: 16px;
+
+    @media (min-width: 900px) {
+      font-size: 22px;
+    }
+
+    @media (min-width: 1000px) {
+      font-size: 24px;
+    }
+
+    @media (min-width: 1350px) {
+      font-size: 28px;
+    }
 
     h1 {
-      font-size: 3em;
+      font-size: 2.5em;
+    }
+
+    p {
+      color: $medium-gray;
+      font-size: 1em;
     }
 
     & *:not(:last-child) {
@@ -53,7 +71,7 @@
       align-items: flex-start;
       margin-top: 2em;
       gap: 15px;
-      padding-right: 5em;
+      padding-right: 2em;
     }
 
   }
