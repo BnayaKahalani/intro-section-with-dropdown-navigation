@@ -7,7 +7,7 @@
   margin: 0 15px;
 
   & *:not(:last-child) {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   h1 {
@@ -58,7 +58,7 @@
 
     p {
       color: $medium-gray;
-      font-size: 1em;
+      font-size: 0.8em;
     }
 
     & *:not(:last-child) {
@@ -70,7 +70,7 @@
       flex-direction: column;
       align-items: flex-start;
       margin-top: 2em;
-      gap: 15px;
+      gap: 40px;
       padding-right: 2em;
     }
 

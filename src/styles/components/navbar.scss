@@ -37,7 +37,10 @@ nav {
           &:hover {
             color: $almost-black
           }
+        }
 
+        span {
+          color: $medium-gray;
         }
       }
     }
@@ -116,7 +119,20 @@ nav {
     flex-direction: column;
     gap: 15px;
     margin-top: 30px;
-    color: $medium-gray;
+
+    button {
+      color: $medium-gray;
+      border: 2px solid $medium-gray;
+
+      &:hover {
+        color: $almost-black;
+
+        .register-btn {
+          border: 2px solid $almost-black;
+        }
+
+      }
+    }
 
     @media (min-width: 1200px) {
       margin-top: 0;
