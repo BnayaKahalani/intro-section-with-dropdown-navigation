@@ -1,8 +1,8 @@
 # Frontend Mentor Challenge - Intro section with dropdown navigation
 
-The challenge was to build out a Intro section with dropdown navigation and get it looking as close to the provided design as possible.
+The challenge was to build out an intro section with dropdown navigation and get it looking as close to the provided design as possible.
 
-[Click here to see the result.](https://bnayakahalani.github.io/news-homepage/)
+<!-- [Click here to see the result.](https://bnayakahalani.github.io/news-homepage/) -->
 
 Tools I used: React, Redux Toolkit, SASS and Vite.
 
