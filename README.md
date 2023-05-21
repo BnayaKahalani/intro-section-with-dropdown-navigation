@@ -2,7 +2,7 @@
 
 The challenge was to build out an intro section with dropdown navigation and get it looking as close to the provided design as possible.
 
-[Click here to see the result.]()
+[Click here to see the result.](https://bnayakahalani.github.io/intro-section-with-dropdown-navigation/)
 
 Tools I used: React, Redux Toolkit, SASS and Vite.
 
